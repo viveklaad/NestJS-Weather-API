@@ -42,10 +42,50 @@ NODE_ENV=development
 PORT=3000
 OPENWEATHERMAP_API_KEY=your_openweathermap_api_key
 JWT_SECRET=your_jwt_secret
+```
 
 
+### NestJS Weather API Documentation
 
-# NestJS Weather API Documentation
+## User Registration and Login
+
+### Register User
+
+**Endpoint:** `/auth/register`
+
+**Method:** `POST`
+
+**Parameters:**
+- {
+    "username": "testuser",
+    "password": "admin@1234",
+    "role": "admin/user"
+  }
+
+**Description:** To register a new user with a role.
+
+**Example:**
+```bash
+curl http://localhost:3000/auth/register
+```
+### Login User
+
+**Endpoint:** `/auth/login`
+
+**Method:** `POST`
+
+**Parameters:**
+- {
+    "username": "testuser",
+    "password": "admin@1234"
+  }
+
+**Description:** To login user.
+
+**Example:**
+```bash
+curl http://localhost:3000/auth/login
+```
 
 ## Weather Information
 
@@ -63,4 +103,20 @@ JWT_SECRET=your_jwt_secret
 **Example:**
 ```bash
 curl http://localhost:3000/weather?location=12345
+```
 
+### Get All Weather
+
+**Endpoint:** `/weather/weather-for-all`
+
+**Method:** `GET`
+
+**Parameters:**
+- `location` (Query Parameter): ZIP code, latitude, or longitude.
+
+**Description:** Get current and yesterday's weather information for the specified location.
+
+**Example:**
+```bash
+curl http://localhost:3000/weather/weather-for-all
+```
