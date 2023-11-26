@@ -18,7 +18,7 @@ Before you begin, make sure you have the following installed:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/nestjs-weather-api.git
+    git clone https://github.com/viveklaad/nestjs-weather-api.git
     ```
 
 2. Navigate to the project directory:
